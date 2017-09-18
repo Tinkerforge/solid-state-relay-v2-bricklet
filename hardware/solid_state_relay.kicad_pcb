@@ -42,7 +42,7 @@
   )
 
   (setup
-    (last_trace_width 0.25)
+    (last_trace_width 0.2)
     (user_trace_width 0.25)
     (user_trace_width 0.29972)
     (user_trace_width 0.5)
@@ -6858,8 +6858,11 @@
       (xy 2.3114 -1.41732) (xy 2.3114 -1.67132) (xy 2.3114 -1.67132)) (layer B.SilkS) (width 0.00254))
   )
 
-  (gr_line (start 113.4 57.5) (end 110.4 57.5) (angle 90) (layer Edge.Cuts) (width 0.381))
-  (gr_line (start 113.4 74.9) (end 110.4 74.9) (angle 90) (layer Edge.Cuts) (width 0.381))
+  (gr_line (start 113.4 74.9) (end 108.9 74.9) (angle 90) (layer F.Fab) (width 0.381))
+  (gr_line (start 107.9 58.5) (end 107.9 73.9) (angle 90) (layer F.Fab) (width 0.381))
+  (gr_line (start 113.4 57.5) (end 108.9 57.5) (angle 90) (layer F.Fab) (width 0.381))
+  (gr_arc (start 108.9 58.5) (end 107.9 58.5) (angle 90) (layer F.Fab) (width 0.381))
+  (gr_arc (start 108.9 73.9) (end 108.9 74.9) (angle 90) (layer F.Fab) (width 0.381))
   (gr_text + (at 107.1 80) (layer F.SilkS)
     (effects (font (size 2 2) (thickness 0.3)))
   )
@@ -6867,9 +6870,6 @@
     (effects (font (size 0.8 0.8) (thickness 0.15)) (justify mirror))
   )
   (gr_line (start 98.4 80.4) (end 98.4 52) (angle 90) (layer Edge.Cuts) (width 0.381))
-  (gr_line (start 107.9 72.4) (end 107.9 60) (angle 90) (layer Edge.Cuts) (width 0.381))
-  (gr_arc (start 110.4 60) (end 107.9 60) (angle 90) (layer Edge.Cuts) (width 0.381))
-  (gr_arc (start 110.4 72.4) (end 110.4 74.9) (angle 90) (layer Edge.Cuts) (width 0.381))
   (gr_arc (start 113.4 78.9) (end 117.4 78.9) (angle 90) (layer Edge.Cuts) (width 0.381))
   (gr_arc (start 113.4 78.9) (end 113.4 74.9) (angle 90) (layer Edge.Cuts) (width 0.381))
   (gr_arc (start 113.4 53.5) (end 113.4 49.5) (angle 90) (layer Edge.Cuts) (width 0.381))
