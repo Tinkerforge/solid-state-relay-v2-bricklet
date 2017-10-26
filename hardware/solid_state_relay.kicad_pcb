@@ -22,7 +22,7 @@
   )
 
   (layers
-    (0 Vorderseite mixed hide)
+    (0 Vorderseite mixed)
     (31 Rückseite signal hide)
     (32 B.Adhes user)
     (33 F.Adhes user)
@@ -77,7 +77,7 @@
     (pad_drill 2.99974)
     (pad_to_mask_clearance 0)
     (aux_axis_origin 0 0)
-    (visible_elements FFFFBFBF)
+    (visible_elements FFFF7FBF)
     (pcbplotparams
       (layerselection 0x00008_00000000)
       (usegerberextensions true)
@@ -5899,7 +5899,7 @@
   )
 
   (module kicad-libraries:D0603E (layer Vorderseite) (tedit 58F76B43) (tstamp 59BFC0B1)
-    (at 106.18 78.7 270)
+    (at 105.15 78.7 270)
     (path /59C00BC4)
     (attr smd)
     (fp_text reference D1 (at 0.85 0.45 270) (layer F.Fab)
@@ -6017,7 +6017,7 @@
   )
 
   (module kicad-libraries:R0603F (layer Vorderseite) (tedit 58F5DD02) (tstamp 59BFC0E9)
-    (at 107.5 78.7 270)
+    (at 106.55 78.7 270)
     (path /59C00AD7)
     (attr smd)
     (fp_text reference R3 (at 0.05 0.225 270) (layer F.Fab)
@@ -6555,7 +6555,7 @@
       (xy 2.3114 -1.41732) (xy 2.3114 -1.67132) (xy 2.3114 -1.67132)) (layer B.SilkS) (width 0.00254))
   )
 
-  (gr_text status (at 105.03 78.72 270) (layer F.SilkS)
+  (gr_text status (at 103.85 78.7 270) (layer F.SilkS)
     (effects (font (size 0.7 0.7) (thickness 0.15)))
   )
   (gr_line (start 113.4 74.9) (end 108.9 74.9) (angle 90) (layer Edge.Cuts) (width 0.381))
@@ -6630,9 +6630,8 @@
   (segment (start 102.491332 74.755115) (end 102.491332 74.758668) (width 0.2) (layer Vorderseite) (net 2))
   (segment (start 102.491332 74.758668) (end 101.88033 75.36967) (width 0.2) (layer Vorderseite) (net 2) (tstamp 59BFC87A))
   (segment (start 101.88033 75.36967) (end 101.26967 75.36967) (width 0.2) (layer Vorderseite) (net 2) (tstamp 59BFC87B))
-  (segment (start 103.1 77.25) (end 103.1 77.26) (width 0.25) (layer Vorderseite) (net 3))
-  (segment (start 103.6899 77.8499) (end 106.18 77.8499) (width 0.25) (layer Vorderseite) (net 3) (tstamp 59E0B109))
-  (segment (start 103.1 77.26) (end 103.6899 77.8499) (width 0.25) (layer Vorderseite) (net 3) (tstamp 59E0B102))
+  (segment (start 105.15 77.8499) (end 103.6999 77.8499) (width 0.2) (layer Vorderseite) (net 3))
+  (segment (start 103.6999 77.8499) (end 103.1 77.25) (width 0.2) (layer Vorderseite) (net 3) (tstamp 59F1E03F))
   (segment (start 106.5 63.65) (end 106.5 64.5) (width 0.59944) (layer Vorderseite) (net 3))
   (segment (start 103.125 77.225) (end 103.15 77.25) (width 0.25) (layer Vorderseite) (net 3) (tstamp 59BFCD6A))
   (segment (start 103.1 77.25) (end 103.125 77.225) (width 0.25) (layer Vorderseite) (net 3) (tstamp 59BFCD69))
@@ -6673,7 +6672,8 @@
   (segment (start 104.05 68.95) (end 103 68.95) (width 0.2) (layer Vorderseite) (net 9) (tstamp 59BFC6D4))
   (segment (start 105.7507 68.625) (end 104.875 68.625) (width 0.2) (layer Vorderseite) (net 9))
   (segment (start 104.875 68.625) (end 104.8 68.55) (width 0.2) (layer Vorderseite) (net 9) (tstamp 59BFC6D0))
-  (segment (start 107.5 79.45) (end 106.2801 79.45) (width 0.25) (layer Vorderseite) (net 10))
+  (segment (start 106.55 79.45) (end 106.4499 79.5501) (width 0.2) (layer Vorderseite) (net 10))
+  (segment (start 106.4499 79.5501) (end 105.15 79.5501) (width 0.2) (layer Vorderseite) (net 10) (tstamp 59F1E01B))
   (segment (start 106.2801 79.45) (end 106.18 79.5501) (width 0.2) (layer Vorderseite) (net 10) (tstamp 59E0B0F5))
   (segment (start 102.7 70) (end 102.7 69.6) (width 0.25) (layer Rückseite) (net 11))
   (segment (start 102.491332 72.244885) (end 102.491332 72.241332) (width 0.25) (layer Vorderseite) (net 11))
@@ -6700,9 +6700,9 @@
   (segment (start 99.69 56.125) (end 100.586 56.125) (width 0.29972) (layer Vorderseite) (net 12))
   (segment (start 100.8 55.911) (end 101.584 55.911) (width 0.29972) (layer Vorderseite) (net 12) (tstamp 59BFC909))
   (segment (start 100.586 56.125) (end 100.8 55.911) (width 0.29972) (layer Vorderseite) (net 12) (tstamp 59BFC908))
+  (segment (start 105.355115 75.108668) (end 106.55 76.303553) (width 0.2) (layer Vorderseite) (net 13))
+  (segment (start 106.55 76.303553) (end 106.55 77.95) (width 0.2) (layer Vorderseite) (net 13) (tstamp 59F1E014))
   (segment (start 105.355115 75.108668) (end 105.355115 75.115115) (width 0.2) (layer Vorderseite) (net 13))
-  (segment (start 105.355115 75.115115) (end 107.5 77.26) (width 0.25) (layer Vorderseite) (net 13) (tstamp 59E0B0ED))
-  (segment (start 107.5 77.26) (end 107.5 77.95) (width 0.25) (layer Vorderseite) (net 13) (tstamp 59E0B0F0))
   (segment (start 105.355115 75.108668) (end 105.358668 75.108668) (width 0.25) (layer Vorderseite) (net 13))
   (segment (start 103.551992 71.184225) (end 104.236217 70.5) (width 0.2) (layer Vorderseite) (net 14))
   (segment (start 105.7507 70.2493) (end 105.7507 69.775) (width 0.2) (layer Vorderseite) (net 14) (tstamp 59BFC6BE))
@@ -6732,9 +6732,9 @@
     )
     (filled_polygon
       (pts
-        (xy 110.343326 75.184918) (xy 110.371937 75.184918) (xy 110.4 75.1905) (xy 113.371389 75.1905) (xy 114.817386 75.478127)
+        (xy 108.843326 75.184918) (xy 108.871937 75.184918) (xy 108.9 75.1905) (xy 113.371389 75.1905) (xy 114.817386 75.478127)
         (xy 116.018988 76.281012) (xy 116.821873 77.482614) (xy 117.103809 78.9) (xy 116.821873 80.317386) (xy 116.018988 81.518988)
-        (xy 114.817386 82.321873) (xy 113.371389 82.6095) (xy 108.5 82.6095) (xy 108.5 75) (xy 109.413679 75)
+        (xy 114.817386 82.321873) (xy 113.371389 82.6095) (xy 108.5 82.6095) (xy 108.5 75.116626)
       )
     )
   )
@@ -6749,9 +6749,9 @@
     )
     (filled_polygon
       (pts
-        (xy 110.343326 75.184918) (xy 110.371937 75.184918) (xy 110.4 75.1905) (xy 113.371389 75.1905) (xy 114.817386 75.478127)
+        (xy 108.843326 75.184918) (xy 108.871937 75.184918) (xy 108.9 75.1905) (xy 113.371389 75.1905) (xy 114.817386 75.478127)
         (xy 116.018988 76.281012) (xy 116.821873 77.482614) (xy 117.103809 78.9) (xy 116.821873 80.317386) (xy 116.018988 81.518988)
-        (xy 114.817386 82.321873) (xy 113.371389 82.6095) (xy 108.5 82.6095) (xy 108.5 75) (xy 109.413679 75)
+        (xy 114.817386 82.321873) (xy 113.371389 82.6095) (xy 108.5 82.6095) (xy 108.5 75.116626)
       )
     )
   )
@@ -6767,8 +6767,8 @@
     (filled_polygon
       (pts
         (xy 114.817386 50.078127) (xy 116.018988 50.881012) (xy 116.821873 52.082614) (xy 117.103809 53.5) (xy 116.821873 54.917386)
-        (xy 116.018988 56.118988) (xy 114.817386 56.921873) (xy 113.371389 57.2095) (xy 110.4 57.2095) (xy 110.371937 57.215082)
-        (xy 110.343326 57.215082) (xy 109.413679 57.4) (xy 108.5 57.4) (xy 108.5 49.7905) (xy 113.371389 49.7905)
+        (xy 116.018988 56.118988) (xy 114.817386 56.921873) (xy 113.371389 57.2095) (xy 108.9 57.2095) (xy 108.871937 57.215082)
+        (xy 108.843326 57.215082) (xy 108.5 57.283374) (xy 108.5 49.7905) (xy 113.371389 49.7905)
       )
     )
   )
@@ -6784,8 +6784,8 @@
     (filled_polygon
       (pts
         (xy 114.817386 50.078127) (xy 116.018988 50.881012) (xy 116.821873 52.082614) (xy 117.103809 53.5) (xy 116.821873 54.917386)
-        (xy 116.018988 56.118988) (xy 114.817386 56.921873) (xy 113.371389 57.2095) (xy 110.4 57.2095) (xy 110.371937 57.215082)
-        (xy 110.343326 57.215082) (xy 109.413679 57.4) (xy 108.5 57.4) (xy 108.5 49.7905) (xy 113.371389 49.7905)
+        (xy 116.018988 56.118988) (xy 114.817386 56.921873) (xy 113.371389 57.2095) (xy 108.9 57.2095) (xy 108.871937 57.215082)
+        (xy 108.843326 57.215082) (xy 108.5 57.283374) (xy 108.5 49.7905) (xy 113.371389 49.7905)
       )
     )
   )
@@ -6855,12 +6855,12 @@
     (fill yes (arc_segments 16) (thermal_gap 0.2) (thermal_bridge_width 0.3))
     (polygon
       (pts
-        (xy 107.4 82.9) (xy 98.4 82.9) (xy 98.4 49.5) (xy 107.4 49.5) (xy 107.4 82.9)
+        (xy 107.4 82.9) (xy 98.4 82.9) (xy 98.4 49.5) (xy 107.4 49.5)
       )
     )
     (filled_polygon
       (pts
-        (xy 107.3 59.405) (xy 107.186127 59.4049) (xy 106.974714 59.492254) (xy 106.812823 59.653863) (xy 106.7251 59.865124)
+        (xy 107.3 59.404999) (xy 107.186127 59.4049) (xy 106.974714 59.492254) (xy 106.812823 59.653863) (xy 106.7251 59.865124)
         (xy 106.7249 60.093873) (xy 106.75 60.15462) (xy 106.75 61.848959) (xy 106.325 61.42396) (xy 106.325 55.65)
         (xy 106.292649 55.48736) (xy 106.234624 55.40052) (xy 106.20052 55.349479) (xy 105.925023 55.073983) (xy 105.9251 54.986127)
         (xy 105.837746 54.774714) (xy 105.676137 54.612823) (xy 105.464876 54.5251) (xy 105.236127 54.5249) (xy 105.024714 54.612254)
