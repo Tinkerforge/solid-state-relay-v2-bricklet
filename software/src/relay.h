@@ -1,7 +1,7 @@
 /* solid-state-relay-v2-bricklet
  * Copyright (C) 2017 Olaf Lüke <olaf@tinkerforge.com>
  *
- * config.h: All configurations for Solid State Relay V2 Bricklet
+ * relay.h: Relay driver
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,20 +19,21 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#ifndef CONFIG_GENERAL_H
-#define CONFIG_GENERAL_H
+#include <stdint.h>
+#include <stdbool.h>
 
-#include "xmc_device.h"
+typedef struct {
+	bool state_new;
+	bool state;
 
-#define STARTUP_SYSTEM_INIT_ALREADY_DONE
-#define SYSTEM_TIMER_FREQUENCY 1000 // Use 1 kHz system timer
+	bool monoflop_new;
+	bool monoflop_in_progress;
+	bool monoflop_state;
+	bool monoflop_done;
+	uint32_t monoflop_time;
+	uint32_t monoflop_time_remaining;
+	uint32_t monoflop_start;
+} Relay;
 
-#define UARTBB_TX_PIN P0_12
-
-#define FIRMWARE_VERSION_MAJOR 2
-#define FIRMWARE_VERSION_MINOR 0
-#define FIRMWARE_VERSION_REVISION 0
-
-#include "config_custom_bootloader.h"
-
-#endif
+void relay_init(void);
+void relay_tick(void);

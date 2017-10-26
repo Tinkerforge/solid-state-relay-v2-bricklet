@@ -28,15 +28,18 @@
 #include "bricklib2/hal/system_timer/system_timer.h"
 #include "bricklib2/logging/logging.h"
 #include "communication.h"
+#include "relay.h"
 
 int main(void) {
 	logging_init();
 	logd("Start Solid State Relay V2 Bricklet\n\r");
 
 	communication_init();
+	relay_init();
 
 	while(true) {
 		bootloader_tick();
 		communication_tick();
+		relay_tick();
 	}
 }

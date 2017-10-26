@@ -53,19 +53,63 @@ void communication_init(void);
 #define SOLID_STATE_RELAY_V2_STATUS_LED_CONFIG_SHOW_STATUS 3
 
 // Function and callback IDs and structs
+#define FID_SET_STATE 1
+#define FID_GET_STATE 2
+#define FID_SET_MONOFLOP 3
+#define FID_GET_MONOFLOP 4
 
+#define FID_CALLBACK_MONOFLOP_DONE 5
 
+typedef struct {
+	TFPMessageHeader header;
+	bool state;
+} __attribute__((__packed__)) SetState;
+
+typedef struct {
+	TFPMessageHeader header;
+} __attribute__((__packed__)) GetState;
+
+typedef struct {
+	TFPMessageHeader header;
+	bool state;
+} __attribute__((__packed__)) GetState_Response;
+
+typedef struct {
+	TFPMessageHeader header;
+	bool state;
+	uint32_t time;
+} __attribute__((__packed__)) SetMonoflop;
+
+typedef struct {
+	TFPMessageHeader header;
+} __attribute__((__packed__)) GetMonoflop;
+
+typedef struct {
+	TFPMessageHeader header;
+	bool state;
+	uint32_t time;
+	uint32_t time_remaining;
+} __attribute__((__packed__)) GetMonoflop_Response;
+
+typedef struct {
+	TFPMessageHeader header;
+	bool state;
+} __attribute__((__packed__)) MonoflopDone_Callback;
 
 
 // Function prototypes
-
+BootloaderHandleMessageResponse set_state(const SetState *data);
+BootloaderHandleMessageResponse get_state(const GetState *data, GetState_Response *response);
+BootloaderHandleMessageResponse set_monoflop(const SetMonoflop *data);
+BootloaderHandleMessageResponse get_monoflop(const GetMonoflop *data, GetMonoflop_Response *response);
 
 // Callbacks
-
+bool handle_monoflop_done_callback(void);
 
 #define COMMUNICATION_CALLBACK_TICK_WAIT_MS 1
-#define COMMUNICATION_CALLBACK_HANDLER_NUM 0
+#define COMMUNICATION_CALLBACK_HANDLER_NUM 1
 #define COMMUNICATION_CALLBACK_LIST_INIT \
+	handle_monoflop_done_callback, \
 
 
 #endif
