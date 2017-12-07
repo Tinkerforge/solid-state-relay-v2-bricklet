@@ -1,0 +1,24 @@
+Needs["NETLink`"]
+LoadNETAssembly["Tinkerforge",NotebookDirectory[]<>"../../.."]
+
+host="localhost"
+port=4223
+uid="XYZ"(*Change XYZ to the UID of your Solid State Relay Bricklet 2.0*)
+
+(*Create IPConnection and device object*)
+ipcon=NETNew["Tinkerforge.IPConnection"]
+ssr=NETNew["Tinkerforge.BrickletSolidStateRelayV2",uid,ipcon]
+ipcon@Connect[host,port]
+
+(*Turn relay on/off 10 times with 1 second delay*)
+For[i=0,i<5,i++,
+ Pause[1];
+ ssr@SetState[True];
+ Pause[1];
+ ssr@SetState[False]
+]
+
+(*Clean up*)
+ipcon@Disconnect[]
+ReleaseNETObject[ssr]
+ReleaseNETObject[ipcon]
