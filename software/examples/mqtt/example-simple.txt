@@ -1,0 +1,12 @@
+
+
+# Change XYZ to the UID of your Solid State Relay Bricklet 2.0
+
+setup:
+	# Turn relay on/off 10 times with 1 second delay
+	for i in 0 1 2 3 4; do
+		wait for 1s 
+		publish '{"state": true}' to tinkerforge/request/solid_state_relay_v2_bricklet/XYZ/set_state 
+		wait for 1s 
+		publish '{"state": false}' to tinkerforge/request/solid_state_relay_v2_bricklet/XYZ/set_state 
+	done
