@@ -13,7 +13,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                                           // Don't use device before ipcon is connected.
 
     // Turn relay on/off 10 times with 1 second delay
-    for i in 0..5 {
+    for _i in 0..5 {
         thread::sleep(Duration::from_millis(1000));
         ssr.set_state(true);
         thread::sleep(Duration::from_millis(1000));
