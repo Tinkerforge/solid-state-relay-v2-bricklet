@@ -1,5 +1,8 @@
-2.0.0:
+2017-10-26: 2.0.0 (6b79a19)
 - Initial version
 
 2018-10-04: 2.0.1 (e142892)
 - Fix race condition with potential buffer overflow (through bricklib2)
+
+2019-05-07: 2.0.2 (<unknown>)
+- Make get-monoflop always return the current state to match documentation

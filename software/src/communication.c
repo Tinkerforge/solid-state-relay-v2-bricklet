@@ -65,15 +65,12 @@ BootloaderHandleMessageResponse set_monoflop(const SetMonoflop *data) {
 
 BootloaderHandleMessageResponse get_monoflop(const GetMonoflop *data, GetMonoflop_Response *response) {
 	response->header.length = sizeof(GetMonoflop_Response);
-	response->state = relay.monoflop_state;
+	response->state = relay.state;
 	response->time = relay.monoflop_time;
 	response->time_remaining = relay.monoflop_time_remaining;
 
 	return HANDLE_MESSAGE_RESPONSE_NEW_MESSAGE;
 }
-
-
-
 
 bool handle_monoflop_done_callback(void) {
 	static bool is_buffered = false;
