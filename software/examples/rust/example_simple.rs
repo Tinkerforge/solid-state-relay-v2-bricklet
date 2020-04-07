@@ -15,9 +15,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     // Turn relay on/off 10 times with 1 second delay
     for _i in 0..5 {
         thread::sleep(Duration::from_millis(1000));
-        ssr.set_state(true);
+        ssr.set_state(true).recv()?;
         thread::sleep(Duration::from_millis(1000));
-        ssr.set_state(false);
+        ssr.set_state(false).recv()?;
     }
 
     println!("Press enter to exit.");
