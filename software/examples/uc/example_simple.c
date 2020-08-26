@@ -11,7 +11,6 @@ void example_setup(TF_HalContext *hal) {
 	// Create device object
 	check(tf_solid_state_relay_v2_create(&ssr, UID, hal), "create device object");
 
-
 	// Turn relay on/off 10 times with 1 second delay
 	int i;
 	for(i = 0; i < 5; ++i) {
@@ -20,7 +19,6 @@ void example_setup(TF_HalContext *hal) {
 		tf_hal_sleep_us(hal, 1000 * 1000);
 		check(tf_solid_state_relay_v2_set_state(&ssr, false), "call set_state");
 	}
-
 }
 
 void example_loop(TF_HalContext *hal) {
