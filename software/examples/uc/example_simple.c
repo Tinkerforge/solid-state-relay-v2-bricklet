@@ -1,23 +1,19 @@
 // This example is not self-contained.
-// It requres usage of the example driver specific to your platform.
+// It requires usage of the example driver specific to your platform.
 // See the HAL documentation.
 
-#include "bindings/hal_common.h"
-#include "bindings/bricklet_solid_state_relay_v2.h"
+#include "src/bindings/hal_common.h"
+#include "src/bindings/bricklet_solid_state_relay_v2.h"
 
-#define UID "XYZ" // Change XYZ to the UID of your Solid State Relay Bricklet 2.0
-
-void check(int rc, const char* msg);
-
+void check(int rc, const char *msg);
 void example_setup(TF_HAL *hal);
 void example_loop(TF_HAL *hal);
-
 
 static TF_SolidStateRelayV2 ssr;
 
 void example_setup(TF_HAL *hal) {
 	// Create device object
-	check(tf_solid_state_relay_v2_create(&ssr, UID, hal), "create device object");
+	check(tf_solid_state_relay_v2_create(&ssr, NULL, hal), "create device object");
 
 	// Turn relay on/off 10 times with 1 second delay
 	int i;
